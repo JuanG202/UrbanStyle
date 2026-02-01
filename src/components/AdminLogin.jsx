@@ -6,7 +6,7 @@ const AdminLogin = ({ onLogin }) => {
   const [error, setError] = useState('');
   
   // 
-  const ADMIN_PASSWORD = '';
+  const ADMIN_PASSWORD = 'G2Urban2024';
 
   const handleSubmit = (e) => {
     e.preventDefault();

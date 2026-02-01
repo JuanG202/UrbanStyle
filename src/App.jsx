@@ -42,6 +42,32 @@ function App() {
     loadAdminProducts();
   }, []);
 
+  useEffect(() => {
+  const handleStorageChange = (e) => {
+    if (e.key === 'adminProducts') {
+      try {
+        const parsed = JSON.parse(e.newValue || '[]');
+
+        const productsWithGender = parsed.map(p => ({
+          ...p,
+          gender: p.gender || 'hombre'
+        }));
+
+        setAdminProducts(productsWithGender);
+      } catch (error) {
+        console.error('Error leyendo adminProducts:', error);
+      }
+    }
+  };
+
+  window.addEventListener('storage', handleStorageChange);
+
+  return () => {
+    window.removeEventListener('storage', handleStorageChange);
+  };
+}, []);
+
+
   // Usar solo productos del admin (sin productos mock)
   useEffect(() => {
     setAllProducts(adminProducts);
