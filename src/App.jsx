@@ -5,6 +5,7 @@ import AdminPanel from './components/AdminPanel';
 import AdminLogin from './components/AdminLogin';
 import './App.css';
 import { formatCOP } from './currency';
+import logo from "../src/assests/urban style.png";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -234,7 +235,7 @@ function App() {
         <div className="header-content">
           <div className="logo-container">
             <img 
-              src={"/public/urban style.png"} 
+              src={logo} 
               alt="G2 Urban Style Logo" 
               className="header-logo" 
             />
