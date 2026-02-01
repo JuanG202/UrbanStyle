@@ -234,7 +234,7 @@ function App() {
         <div className="header-content">
           <div className="logo-container">
             <img 
-              src={"/src/assests/urban style.png"} 
+              src={"/public/urban style.png"} 
               alt="G2 Urban Style Logo" 
               className="header-logo" 
             />
