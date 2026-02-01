@@ -271,14 +271,13 @@ function App() {
           )}
 
           <div className="header-buttons">
-       {/* 
+       
             <button 
               className="admin-button"
               onClick={handleAdminClick}
             >
               {showAdmin && isAdminAuthenticated ? '🏪 Tienda' : '⚙️ Admin'}
-            </button>  */}
-
+            </button>
             <button 
               className="cart-button"
               onClick={() => {
