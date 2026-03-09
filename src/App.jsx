@@ -8,7 +8,7 @@ import './App.css';
 import { formatCOP } from './currency';
 import logo from "../src/assests/urban style.png";
 
-const API_URL = "https://urban-style-back.vercel.app//api/products";
+const API_URL = "https://urban-style-back.vercel.app/api/products";
 
 function App() {
 

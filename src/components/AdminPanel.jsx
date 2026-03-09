@@ -3,7 +3,7 @@ import './AdminPanel.css';
 import { formatCOP, formatCOPInput, parseCOPInput } from '../currency';
 import axios from "axios";
 
-const API_URL = "https://urban-style-back.vercel.app//api/products";
+const API_URL = "https://urban-style-back.vercel.app/api/products";
 
 const AdminPanel = ({ onProductsChange }) => {
 
