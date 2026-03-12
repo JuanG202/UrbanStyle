@@ -302,6 +302,60 @@ function App() {
                 Todos
               </button>
 
+              <div className="gender-dropdown-container">
+                <button
+                  className={`gender-filter-btn ${selectedGender === 'hombre' ? 'active' : ''}`}
+                  onClick={() => handleGenderClick('hombre')}
+                >
+                  Hombre
+                </button>
+
+                {openDropdown === 'hombre' && (
+                  <div className="gender-dropdown-menu">
+                    {getCategoriesByGender('hombre').map((category) => (
+                      <button
+                        key={category.value}
+                        className={`category-btn ${
+                          selectedGender === 'hombre' && selectedCategory === category.value
+                            ? 'active'
+                            : ''
+                        }`}
+                        onClick={() => handleCategorySelect('hombre', category.value)}
+                      >
+                        {category.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="gender-dropdown-container">
+                <button
+                  className={`gender-filter-btn ${selectedGender === 'mujer' ? 'active' : ''}`}
+                  onClick={() => handleGenderClick('mujer')}
+                >
+                  Dama
+                </button>
+
+                {openDropdown === 'mujer' && (
+                  <div className="gender-dropdown-menu">
+                    {getCategoriesByGender('mujer').map((category) => (
+                      <button
+                        key={category.value}
+                        className={`category-btn ${
+                          selectedGender === 'mujer' && selectedCategory === category.value
+                            ? 'active'
+                            : ''
+                        }`}
+                        onClick={() => handleCategorySelect('mujer', category.value)}
+                      >
+                        {category.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
             </div>
 
           )}

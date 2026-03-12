@@ -52,10 +52,6 @@
   position: relative;
 }
 
-.gender-dropdown-container {
-  position: relative;
-}
-
 .gender-filter-btn {
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid white;
@@ -84,7 +80,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.gender-dropdown {
+.gender-dropdown-container {
+  position: relative;
+}
+
+.gender-dropdown-menu {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
@@ -108,31 +108,31 @@
   }
 }
 
-.dropdown-item {
+.category-btn {
   display: block;
   width: 100%;
-  padding: 12px 20px;
+  padding: 10px 18px;
   text-align: left;
   background: white;
   border: none;
   color: #333;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   border-bottom: 1px solid #f0f0f0;
 }
 
-.dropdown-item:last-child {
+.category-btn:last-child {
   border-bottom: none;
 }
 
-.dropdown-item:hover {
+.category-btn:hover {
   background: #f8f9ff;
   color: #667eea;
 }
 
-.dropdown-item.active {
+.category-btn.active {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   font-weight: 600;
@@ -308,7 +308,7 @@
     font-size: 0.85rem;
   }
 
-  .gender-dropdown {
+  .gender-dropdown-menu {
     left: 50%;
     transform: translateX(-50%);
     min-width: 160px;
